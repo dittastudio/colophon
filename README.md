@@ -10,6 +10,20 @@ npm i @ditta/colophon
 
 ### Setup
 
+**Nuxt**
+Create a `plugins/ditta.client.ts` file. Nuxt will automatically pick it up.
+
+```typescript
+import ditta from '@ditta/colophon'
+
+export default defineNuxtPlugin((_nuxtApp) => {
+  ditta()
+})
+```
+
+**Vanilla JS/TS**
+Anywhere in your code:
+
 ```typescript
 import ditta from '@ditta/colophon'
 
