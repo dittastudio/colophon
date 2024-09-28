@@ -1,7 +1,7 @@
 {
   "name": "@ditta/colophon",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "description": "Colophon used for all ditta projects",
   "author": "ditta <hello@ditta.studio>",
@@ -17,11 +17,11 @@
     ".": {
       "import": {
         "types": "./dist/lib.d.ts",
-        "default": "./dist/colophon.es.js"
+        "default": "./dist/lib.es.js"
       },
       "require": {
         "types": "./dist/lib.d.ts",
-        "default": "./dist/colophon.umd.js"
+        "default": "./dist/lib.umd.js"
       }
     }
   },

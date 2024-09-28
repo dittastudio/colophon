@@ -24,7 +24,7 @@ export default defineConfig({
       name: 'colophon',
       fileName: (format, entryName) => `${entryName}.${format}.js`,
       entry: {
-        colophon: resolve(__dirname, 'src/lib.ts'),
+        lib: resolve(__dirname, 'src/lib.ts'),
       },
     },
   },
