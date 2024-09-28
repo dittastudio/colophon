@@ -16,9 +16,11 @@
   "exports": {
     ".": {
       "import": {
+        "types": "./dist/lib.d.ts",
         "default": "./dist/colophon.es.js"
       },
       "require": {
+        "types": "./dist/lib.d.ts",
         "default": "./dist/colophon.umd.js"
       }
     }
@@ -31,12 +33,21 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "test": "vitest --dom",
+    "test:ui": "vitest --dom --ui",
+    "coverage": "vitest run --coverage"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.7.1",
-    "eslint": "^9.11.0",
-    "typescript": "^5.5.3",
-    "vite": "^5.4.1"
+    "@antfu/eslint-config": "^3.7.3",
+    "@types/jest": "^29.5.13",
+    "@types/node": "^22.7.4",
+    "eslint": "^9.11.1",
+    "happy-dom": "^15.7.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8",
+    "vite-plugin-dts": "^4.2.2",
+    "vitest": "^2.1.1"
   }
 }

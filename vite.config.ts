@@ -1,7 +1,18 @@
+/// <reference types="vitest" />
+
 import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
+import dts from 'vite-plugin-dts'
 
 export default defineConfig({
+  plugins: [
+    dts({
+      insertTypesEntry: true,
+    }),
+  ],
+  test: {
+    globals: true,
+  },
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
@@ -10,11 +21,11 @@ export default defineConfig({
   build: {
     outDir: resolve(__dirname, 'dist'),
     lib: {
-      entry: {
-        colophon: resolve(__dirname, 'src/main.ts'),
-      },
       name: 'colophon',
       fileName: (format, entryName) => `${entryName}.${format}.js`,
+      entry: {
+        colophon: resolve(__dirname, 'src/lib.ts'),
+      },
     },
   },
 })
